@@ -6,13 +6,21 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 19:51:10 by jnoh              #+#    #+#             */
-/*   Updated: 2023/01/06 20:23:39 by jnoh             ###   ########.fr       */
+/*   Updated: 2023/01/06 21:21:08 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact();
+Contact::Contact()
+{
+    idx_ = -1;
+    first_name_ = "";
+    last_name_ = "";
+    nickname_ = "";
+    phone_number_ = "";
+    darkest_secret_ = "";
+}
 
 void	Contact::SetIdx(const int idx)
 {
@@ -44,9 +52,14 @@ void	Contact::SetDarkestSecrect(const std::string& darkest_secret)
     darkest_secret_ = darkest_secret;
 }
 
-std::string&	Contact::GetFirstName()
+int             Contact::GetIdx()
 {
     return idx_;
+}
+
+std::string&	Contact::GetFirstName()
+{
+    return first_name_;
 }
 
 std::string&	Contact::GetLastName()
@@ -54,17 +67,17 @@ std::string&	Contact::GetLastName()
     return last_name_;
 }
 
-std::stirng&	Contact::GetNickName()
+std::string&	Contact::GetNickName()
 {
     return nickname_;
 }
 
-std::stirng&	Contact::GetPhoneNumber()
+std::string&	Contact::GetPhoneNumber()
 {
     return phone_number_;
 }
 
-std::stirng&	Contact::GetDarkestSecret()
+std::string&	Contact::GetDarkestSecret()
 {
     return darkest_secret_;
 }
@@ -115,4 +128,13 @@ void			Contact::DisplayContact()
     else
         std::cout << std::setw(10) << std::right << GetNickName();
     std::cout << "|" << std::endl;
+}
+
+void			Contact::DisplayContactAll()
+{
+    std::cout << "First Name: " << GetFirstName() << std::endl;
+    std::cout << "Last Name: " << GetLastName() << std::endl;
+    std::cout << "Nickname: " << GetNickName() << std::endl;
+    std::cout << "Phone Number: " << GetPhoneNumber() << std::endl;
+    std::cout << "Darkest Secrect: " << GetDarkestSecret() << std::endl;
 }
