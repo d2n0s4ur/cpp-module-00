@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 19:37:15 by jnoh              #+#    #+#             */
-/*   Updated: 2023/01/06 21:19:50 by jnoh             ###   ########.fr       */
+/*   Updated: 2023/01/07 21:27:07 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,6 @@
 
 class   Contact {
     public:
-		Contact();
 		void			SetIdx(const int idx);
 		void			SetFirstName(const std::string& first_name);
 		void			SetLastName(const std::string& last_name);
@@ -26,14 +25,12 @@ class   Contact {
 		void			SetPhoneNumber(const std::string& phone_number);
 		void			SetDarkestSecrect(const std::string& darkest_secret);
 		
-		int				GetIdx();
 		std::string&	GetFirstName();
 		std::string&	GetLastName();
-		std::string&	GetNickName();
-		std::string&	GetPhoneNumber();
-		std::string&	GetDarkestSecret();
+		std::stirng&	GetNickName();
+		std::stirng&	GetPhoneNumber();
+		std::stirng&	GetDarkestSecret();
 		void			DisplayContact();
-		void			DisplayContactAll();
     private:
 		int				idx_;
         std::string		first_name_;
