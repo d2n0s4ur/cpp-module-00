@@ -6,7 +6,7 @@
 /*   By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 19:51:10 by jnoh              #+#    #+#             */
-/*   Updated: 2023/01/06 21:21:08 by jnoh             ###   ########.fr       */
+/*   Updated: 2023/01/12 15:35:30 by jnoh             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ void	Contact::SetDarkestSecrect(const std::string& darkest_secret)
     darkest_secret_ = darkest_secret;
 }
 
-int             Contact::GetIdx()
+int     Contact::GetIdx()
 {
     return idx_;
 }
