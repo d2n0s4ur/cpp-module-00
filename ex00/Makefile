@@ -6,7 +6,7 @@
 #    By: jnoh <jnoh@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/06 15:01:54 by jnoh              #+#    #+#              #
-#    Updated: 2023/01/12 15:31:18 by jnoh             ###   ########.fr        #
+#    Updated: 2023/01/12 15:54:36 by jnoh             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ NAME	=	megaphone
 OBJS	=	$(SRCS:.cpp=.o)
 
 $(NAME) : $(OBJS)
-			$(CC) -o $(NAME) $(CFLAGS) $(OBJS)
+			$(CC) -o $(NAME) $(CPPFLAGS) $(OBJS)
 
 all	: $(NAME)
 
